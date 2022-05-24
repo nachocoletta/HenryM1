@@ -21,7 +21,6 @@ function DecimalABinario(num) {
   
    while(num / 2 !== 0) {
       resto = num % 2;
-      console.log(resto);
       num = Math.floor(num / 2);
       numeroBinario += resto;
    } 
