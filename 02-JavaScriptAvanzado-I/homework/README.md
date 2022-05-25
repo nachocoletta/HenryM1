@@ -24,18 +24,43 @@ var c = function(a, b, c) {
   f(a,b,c);
   console.log(b);
 }
+
 c(8,9,10);
 console.log(b);
 console.log(x);
+
+
+/* imprime -->
+
+   10
+   8
+   8
+   9
+   10
+   1       
+*/
 ```
 
 ```javascript
+
+
 console.log(bar);
 console.log(baz);
+
 foo();
-function foo() { console.log('Hola!'); }
+
+function foo() { 
+   console.log('Hola!'); 
+}
+
 var bar = 1;
 baz = 2;
+
+/* imprime
+   1
+   undefined
+  'Hola!'
+*/ 
 ```
 
 ```javascript

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function BinarioADecimal(num) {
+        // tu codigo aca
+            let acumulado = 0;
+            var numeroEnBinarioString = String(num);
+            let j = 0;
+            
+            for(let i = numeroEnBinarioString.length; i > 0; i--){
+                acumulado = acumulado + (parseInt(numeroEnBinarioString[j]) * Math.pow(2,i-1));
+                j++;
+            }
+            
+                return acumulado;
+        }
+
+        function DecimalABinario(num) {
+            // tu codigo aca
+            let numeroBinario = "";
+            let resto;
+            
+            while(num / 2 !== 0) {
+                resto = num % 2;
+                num = Math.floor(num / 2);
+                numeroBinario += resto;
+            } 
+            
+            let arreglo = [];
+            arreglo =  numeroBinario.split('').reverse().join('');
+            
+            return arreglo;
+        }
+
+        console.log(DecimalABinario(5));
+        console.log(BinarioADecimal(101));
+    </script>
+</body>
+</html>
